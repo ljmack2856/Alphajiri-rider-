@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> </html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +10,32 @@
     <title>Simple portfolio</title>
 </head>
 <body>
-  
+  <img class="gradient"src="images/gradient.png" alt="gradient">
    <div class="layer-blur"></div>
     <div class="container">
+       
         <header>
-          <button class="menu-toggle" aria-label="Open menu">
-  ☰
-</button>
 
-            <logo class="logo">MOSOTI</logo>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li class="nav-links"><a href="#home">Home</a></li>
-                <li class="nav-links"><a href="#about">About</a></li>
-                <li class="nav-links"><a href="#projects">Projects</a></li>
-                <li class="nav-links"><a href="#skills">Skills</a></li>
-                <li class="nav-links"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        </header>
+  <h2 class="logo">MOSOTI</h2>
+
+  <button class="menu-toggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+</header>
+
         <main>
            
         <div class="social-menu">
@@ -216,20 +223,15 @@
 </footer>
 
     <script>
-  const toggle = document.querySelector(".social-toggle");
-  const links = document.querySelector(".social-links");
+ const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-  toggle.addEventListener("click", () => {
-    links.style.display =
-      links.style.display === "flex" ? "none" : "flex";
-  });
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('active');  // animate icon
+});
+
   
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
 
 
 </script>
